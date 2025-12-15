@@ -1,0 +1,89 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent; /* Для WebKit (Chrome, Safari) */
+    -moz-tap-highlight-color: transparent; /* Для Firefox */
+    -ms-tap-highlight-color: transparent; /* Для IE */
+    tap-highlight-color: transparent; /* Общий вариант */
+}
+
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-tap-highlight-color: transparent; /* Для WebKit (Chrome, Safari) */
+    -moz-tap-highlight-color: transparent; /* Для Firefox */
+    -ms-tap-highlight-color: transparent; /* Для IE */
+    tap-highlight-color: transparent; /* Общий вариант */
+}
+.trias{
+    animation: triaset ease-in-out 0.1s 0.2s;
+}
+@keyframes triaset{
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+}
+@font-face {
+    font-family: 'pixel';
+    src: url('../pixelcyr_normal.ttf');
+}
+
+div{
+    background: linear-gradient(to right, #F5DEB3, #FFDAB9);
+    z-index: 999;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div button{
+    background: rgba(0,0,0,0.5);
+    height: 80px;
+    font-family: 'pixel';
+    font-size: 3rem;
+    transition: all 0.2s;
+    color: wheat;
+    cursor: pointer;
+    border: none;
+}
+
+div button:active{
+    scale: 0.8;
+}
+
+div button:hover{
+    scale: 0.9;
+}
+
+#title{
+    font-family: 'pixel';
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+section{
+    display: flex;
+    gap: 10px;
+}
